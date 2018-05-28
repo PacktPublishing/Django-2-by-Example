@@ -1,0 +1,112 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-11 13:52+0100\n"
+"PO-Revision-Date: 2018-03-11 12:20+0000\n"
+"Last-Translator: b'  <>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: cart/forms.py:12
+msgid "Quantity"
+msgstr "Cantidad"
+
+#: coupons/forms.py:6
+msgid "Coupon"
+msgstr "Cupón"
+
+#: myshop/settings.py:118
+msgid "English"
+msgstr "Inglés"
+
+#: myshop/settings.py:119
+msgid "Spanish"
+msgstr "Español"
+
+#: myshop/urls.py:10
+msgid "admin/"
+msgstr ""
+
+#: myshop/urls.py:11
+msgid "cart/"
+msgstr ""
+
+#: myshop/urls.py:12
+msgid "orders/"
+msgstr ""
+
+#: myshop/urls.py:13
+msgid "payment/"
+msgstr ""
+
+#: myshop/urls.py:14
+#, fuzzy
+#| msgid "Coupon"
+msgid "coupons/"
+msgstr "Cupón"
+
+#: payment/urls.py:9
+msgid "process/"
+msgstr ""
+
+#: payment/urls.py:10
+msgid "done/"
+msgstr ""
+
+#: payment/urls.py:11
+msgid "canceled/"
+msgstr ""
+
+#: shop/templates/shop/base.html:7 shop/templates/shop/base.html:12
+msgid "My shop"
+msgstr "Mi tienda"
+
+#: shop/templates/shop/base.html:18
+msgid "Your cart"
+msgstr "Tu carro"
+
+#: shop/templates/shop/base.html:20
+#, python-format
+msgid ""
+"\n"
+"                %(total_items)s item%(total_items_plural)s,\n"
+"                $%(total_price)s\n"
+"              "
+msgstr ""
+"\n"
+"                %(total_items)s producto%(total_items_plural)s,\n"
+"                $%(total_price)s\n"
+"              "
+
+#: shop/templates/shop/base.html:26
+msgid "Your cart is empty."
+msgstr "Tu carro está vacío."
+
+#: shop/templates/shop/product/detail.html:18
+msgid "Add to cart"
+msgstr "Añadir al carro"
+
+#: shop/templates/shop/product/list.html:6
+#: shop/templates/shop/product/list.html:24
+msgid "Products"
+msgstr "Productos"
+
+#: shop/templates/shop/product/list.html:11
+msgid "Categories"
+msgstr "Categorías"
+
+#: shop/templates/shop/product/list.html:14
+msgid "All"
+msgstr "Todos"
