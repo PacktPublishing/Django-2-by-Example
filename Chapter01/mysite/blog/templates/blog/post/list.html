@@ -4,7 +4,7 @@
  
 {% block content %}
   <h1>My Blog</h1>
-  {% for post in post %}
+  {% for post in posts %}
     <h2>
       <a href="{{ post.get_absolute_url }}">
         {{ post.title }}
