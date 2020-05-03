@@ -163,7 +163,7 @@ class ContentDeleteView(View):
         return redirect('courses:module_content_list', module.id)
 
 
-class ModuleContentListView(ListView):
+class ModuleContentListView(TemplateResponseMixin, View):
     template_name = 'courses/manage/module/content_list.html'
 
     # Get all modules and generate their content in the template
