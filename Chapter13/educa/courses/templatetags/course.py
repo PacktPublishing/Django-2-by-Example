@@ -1,9 +1,9 @@
 from django import template
 
-
 register = template.Library()
 
-
+# filter to get name of a model
+# object|model_name
 @register.filter
 def model_name(obj):
     try:

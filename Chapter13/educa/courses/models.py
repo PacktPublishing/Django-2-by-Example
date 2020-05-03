@@ -2,9 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
-from .fields import OrderField
+from django.utils import safestring
 from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
+
+from .fields import OrderField
 
 
 class Subject(models.Model):
@@ -49,10 +51,10 @@ class Module(models.Model):
     order = OrderField(blank=True, for_fields=['course'])
 
     class Meta:
-            ordering = ['order']
+        ordering = ['order']
 
     def __str__(self):
-        return '{}. {}'.format(self.order, self.title)
+        return f'{self.order}. {self.title}'
 
 
 class Content(models.Model):
@@ -60,17 +62,17 @@ class Content(models.Model):
                                related_name='contents',
                                on_delete=models.CASCADE)
     content_type = models.ForeignKey(ContentType,
-                                     limit_choices_to={'model__in':('text',
-                                                                    'video',
-                                                                    'image',
-                                                                    'file')},
+                                     limit_choices_to={'model__in': ('text',
+                                                                     'video',
+                                                                     'image',
+                                                                     'file')},
                                      on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     item = GenericForeignKey('content_type', 'object_id')
     order = OrderField(blank=True, for_fields=['module'])
 
     class Meta:
-            ordering = ['order']
+        ordering = ['order']
 
 
 class ItemBase(models.Model):
@@ -88,18 +90,21 @@ class ItemBase(models.Model):
         return self.title
 
     def render(self):
-        return render_to_string('courses/content/{}.html'.format(
-            self._meta.model_name), {'item': self})
+        return render_to_string(f'courses/content/{self._meta.model_name}.html',
+                                {'item': self})
 
 
 class Text(ItemBase):
     content = models.TextField()
 
+
 class File(ItemBase):
     file = models.FileField(upload_to='files')
 
+
 class Image(ItemBase):
-       file = models.FileField(upload_to='images')
+    image = models.FileField(upload_to='images')
+
 
 class Video(ItemBase):
     url = models.URLField()
