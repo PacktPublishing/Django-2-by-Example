@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 
+app_name = 'courses'
+
 urlpatterns = [
     path('mine/',
          views.ManageCourseListView.as_view(),
@@ -36,7 +38,6 @@ urlpatterns = [
     path('content/order/',
          views.ContentOrderView.as_view(),
          name='content_order'),
-
     path('subject/<slug:subject>)/',
          views.CourseListView.as_view(),
          name='course_list_subject'),

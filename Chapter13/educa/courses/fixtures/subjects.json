@@ -3,32 +3,24 @@
   "model": "courses.subject",
   "pk": 1,
   "fields": {
-    "title": "Mathematics",
-    "slug": "mathematics"
+    "title": "first subject",
+    "slug": "first-subject"
   }
 },
 {
   "model": "courses.subject",
   "pk": 2,
   "fields": {
-    "title": "Music",
-    "slug": "music"
+    "title": "second subject",
+    "slug": "second-subject"
   }
 },
 {
   "model": "courses.subject",
   "pk": 3,
   "fields": {
-    "title": "Physics",
-    "slug": "physics"
-  }
-},
-{
-  "model": "courses.subject",
-  "pk": 4,
-  "fields": {
-    "title": "Programming",
-    "slug": "programming"
+    "title": "third subject",
+    "slug": "third-subject"
   }
 }
 ]

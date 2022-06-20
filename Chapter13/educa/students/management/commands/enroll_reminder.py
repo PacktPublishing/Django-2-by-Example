@@ -16,10 +16,13 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         emails = []
         subject = 'Enroll in a course'
-        date_joined = datetime.date.today() - datetime.timedelta(days=options['days'])
-        users = User.objects.annotate(course_count=Count('courses_joined')).filter(course_count=0, date_joined__lte=date_joined)
+        date_joined = datetime.date.today(
+        ) - datetime.timedelta(days=options['days'])
+        users = User.objects.annotate(course_count=Count('courses_joined')).filter(
+            course_count=0, date_joined__lte=date_joined)
         for user in users:
-            message = 'Dear {},\n\nWe noticed that you didn\'t enroll in any courses yet. What are you waiting for?'.format(user.first_name)
+            message = 'Dear {},\n\nWe noticed that you didn\'t enroll in any courses yet. What are you waiting for?'.format(
+                user.first_name)
             emails.append((subject,
                            message,
                            settings.DEFAULT_FROM_EMAIL,
