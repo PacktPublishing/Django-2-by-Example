@@ -1,7 +1,9 @@
 # Django 2 by Example
 
-
 This is the code repository for [Django 2 by Example](https://www.packtpub.com/application-development/django-2-example?utm_source=GitHub&utm_medium=repo&utm_campaign=9781788472487), published by [Packt](https://www.packtpub.com). It contains all the supporting project files necessary to work through the book from start to finish.
+
+## :warning:  New edition available
+Check out the source code for the latest edition of this book: [Django 4 by Example](https://github.com/PacktPublishing/Django-4-by-example/)
 
 ## About the Book
 
